@@ -4,13 +4,19 @@
         "customManagers:dockerfileVersions",
         ":separatePatchReleases"
     ],
+    "logLevelRemap": [
+        {
+            "matchMessage": "/^Custom manager fetcher/",
+            "newLogLevel": "info"
+        }
+    ],
     "customDatasources": {
-      "prosody": {
-        "defaultRegistryUrlTemplate": "https://prosody.im/downloads/source/",
-        "format": "html",
-        "transformTemplates": [
-          "{ \"releases\": $.releases.{ \"version\": $match(version, /^prosody-(.+)\\.tar\\.gz$/).groups[0] }[version] }"
-        ]
-      }
+        "prosody": {
+            "defaultRegistryUrlTemplate": "https://prosody.im/downloads/source/",
+            "format": "html",
+            "transformTemplates": [
+                "{ \"releases\": $.releases.{ \"version\": $match(version, /^prosody-(.+)\\.tar\\.gz$/).groups[0] }[version] }"
+            ]
+        }
     }
-  }
+}
