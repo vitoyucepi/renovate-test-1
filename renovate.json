@@ -1,5 +1,5 @@
 {
-    "extends": ["config:best-practices"],
+    "extends": ["config:best-practices", "customManagers:dockerfileVersions"],
     "customDatasources": {
       "prosody": {
         "defaultRegistryUrlTemplate": "https://prosody.im/downloads/source/",
