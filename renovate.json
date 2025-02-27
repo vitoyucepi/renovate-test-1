@@ -1,0 +1,12 @@
+{
+    "extends": ["config:best-practices"],
+    "customDatasources": {
+      "prosody": {
+        "defaultRegistryUrlTemplate": "https://prosody.im/downloads/source/",
+        "format": "html",
+        "transformTemplates": [
+          "{ \"releases\": $.releases.{ \"version\": $match(version, /^prosody-(.+)\\.tar\\.gz$/).groups[0] }[version] }"
+        ]
+      }
+    }
+  }
