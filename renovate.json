@@ -8,7 +8,7 @@
         {
             "matchPackageNames": ["hadolint/hadolint"],
             "matchUpdateTypes": ["major", "minor"],
-            "matchCurrentVersion": "!/^2\\.13\\./",
+            "matchCurrentVersion": "!/^v2\\.13\\./",
             "enabled": false
         }
     ]
