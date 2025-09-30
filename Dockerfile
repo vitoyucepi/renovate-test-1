@@ -1,4 +1,6 @@
 FROM alpine:3.21
 
-# renovate: datasource=custom.prosody depName=prosody
-ARG PROSODY_VERSION=0.11.11
+# renovate: datasource=github-tags depName=hadolint/hadolint
+ARG HADOLINT_VERSION=2.12.0
+# renovate: datasource=github-tags depName=hadolint/hadolint
+ARG HADOLINT_VERSION=2.13.1

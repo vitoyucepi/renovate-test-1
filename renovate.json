@@ -4,19 +4,12 @@
         "customManagers:dockerfileVersions",
         ":separatePatchReleases"
     ],
-    "logLevelRemap": [
+    "packageRules": [
         {
-            "matchMessage": "/^Custom manager fetcher/",
-            "newLogLevel": "info"
+            "matchPackageNames": ["hadolint/hadolint"],
+            "matchUpdateTypes": ["major", "minor"],
+            "matchCurrentVersion": "!/^2\\.13\\./",
+            "enabled": false
         }
-    ],
-    "customDatasources": {
-        "prosody": {
-            "defaultRegistryUrlTemplate": "https://prosody.im/downloads/source/",
-            "format": "html",
-            "transformTemplates": [
-                "{ \"releases\": $.releases.{ \"version\": $match(version, /^prosody-(.+)\\.tar\\.gz$/).groups[0] }[version] }"
-            ]
-        }
-    }
+    ]
 }
