@@ -1,4 +1,4 @@
-FROM alpine:3.21
+FROM scratch
 
 # renovate: datasource=github-tags depName=hadolint/hadolint
 ARG HADOLINT_VERSION=2.12.0
