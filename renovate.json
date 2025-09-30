@@ -7,8 +7,13 @@
     "packageRules": [
         {
             "matchPackageNames": ["hadolint/hadolint"],
+            "matchDatasources": ["github-tags"],
+            "extractVersion": "^v?(?<version>.*)$"
+        },
+        {
+            "matchPackageNames": ["hadolint/hadolint"],
             "matchUpdateTypes": ["major", "minor"],
-            "matchCurrentVersion": "!/^v2\\.13\\./",
+            "matchCurrentVersion": "!/^2\\.13\\./",
             "enabled": false
         }
     ]
